@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* height: 100vh; */
+  width: 100vw;
+}
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Sidebar width and main content */
+  grid-template-rows: auto 1fr; /* Navbar height and main content */
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content";
+  height: 100vh; /* Ensure full viewport height */
+  color:#e0e0e0;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #22212F; /* Example navbar background color */
+  padding: 10px;
+  width: 100%;
+  height: 70px;
+  mix-blend-mode: color-dodge;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+#image{
+  height: 60px;
+  width: 80px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Arrange links horizontally */
+  justify-content: space-around; /* Distribute links evenly */
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #2d2121; /* Example sidebar background color */
+  padding: 20px;
+  /* position: relative; */
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+}
+
+.content {
+  background-color: #182317;
+  grid-area: content;
+  padding: 30px;
+  overflow-y: auto; /* Add scroll if content overflows */
+ 
+}
+
+/* Basic styling for links */
+a {
+  text-decoration: none;
+  color: #E0E0E0;
+}
+
+a:hover {
+  color: #007bff; /* Example hover color */
+}
+p {
+  width: 90%; 
+  /* text-wrap: wrap; */
+}
